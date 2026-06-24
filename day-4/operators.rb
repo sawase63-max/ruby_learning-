@@ -76,15 +76,31 @@
   # puts defined? bar
   
 
+
+
   # :: - double colon operator
   # 
 
-  COUNT = 0   #THIS IS constant defined in main Object class
+  # COUNT = 0   #THIS IS constant defined in main Object class
 
-  module Foo
-    COUNT = 0
-    ::COUNT= 1
-    COUNT= 2
-  end 
-  puts COUNT
-  puts Foo::COUNT
+  # module Foo
+  #   COUNT = 0
+  #   ::COUNT= 1
+  #   COUNT= 2
+  # end 
+  # puts COUNT      #this is global COUNT = 1
+  # puts Foo::COUNT #this is Local Foo constant
+  
+
+
+  # # puts !(1 && nil)
+  
+
+  # turnary operator
+
+  # a = 40 
+  # b= 30
+
+  # c = (a > b)? "a is greater" :"b is greater"
+
+  # puts c

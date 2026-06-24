@@ -78,12 +78,45 @@
 
   # next statement in ruby is similer to java's continue
   
-  for i in 1..5
+  # for i in 1..5
     
-    if i < 3
-      next
-    end
+  #   if i < 3
+  #     next
+  #   end
 
-    puts i
+  #   puts i
 
-  end
+  # end
+  
+
+  # redo statement in ruby 
+  
+
+# i = 1
+
+# num = 5
+  
+#   while i < num do
+#     j = i
+#     while j < num do
+#       print "*"
+
+#       j += 1
+#     end   
+
+#      puts " "
+#      i += 1
+#   end 
+
+
+# for i in 1..10
+#   puts i * 2 
+# end
+
+
+
+(1..5).each do |i|
+  
+  
+  puts i * 2 
+end
