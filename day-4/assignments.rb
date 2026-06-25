@@ -64,11 +64,20 @@
 #
 #by loop 
 
-for i in 1..10
-  if i % 2 ==0 
-   puts "even num: #{i}"
+# for i in 1..10
+#   if i % 2 ==0 
+#    puts "even num: #{i}"
    
-  else
-    puts "odd num: #{i}"
-  end
+#   else
+#     puts "odd num: #{i}"
+#   end
+# end
+
+class Demo
+  
 end
+
+a = 1
+b = 1.0
+
+puts a.eql?(b)
