@@ -14,7 +14,15 @@
 
 
 
-H = Hash["a" => 100, "b" => 200]
+# H = Hash["a" => 100, "b" => 200]
 
 
-puts "#{H['a']}"
+# puts "#{H['a']}"
+
+
+months = Hash.new("month")
+months = {"1" => "January" , "2" => "February"}
+
+keys = months.keys
+
+print keys
