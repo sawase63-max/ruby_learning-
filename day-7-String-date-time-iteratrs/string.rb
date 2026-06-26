@@ -24,4 +24,55 @@ str1 = "we can not interpolute there in '' "
 # puts str.empty?
 # puts str.length
 # 
+# a = [1,2,3,4,4,5]
 
+# b = a.map do |i|
+
+#   if i > 3
+#      i
+ 
+#   end
+# end
+
+# print "#{b} "
+
+# str = <<STRING 
+
+# "asdasl"
+
+# "STRINGdaslda"
+# ";alsda;lsds;alk;sda;ka;ka;da;ad;lakd;a;d"
+
+  
+# STRING
+
+# puts str
+# 
+
+
+# str = %/
+# adasdadasdasaadss
+# adasadasdadadddfgf
+# gffgfffpodjiefjieja
+# ealkfj;flsf;sefjlfsekfjcj
+# /
+
+# puts str
+# 
+#
+
+str = "
+
+this is also another way of defining multi line 
+string in ruby 
+there are three ways for this
+<<STRING .... STRING 
+
+%{
+.....
+}
+
+and ""ss
+"
+
+puts str

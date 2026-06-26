@@ -34,7 +34,7 @@
 # Count the total number of words.Find the longest word in the text.Count how many times each unique word appears.Print a list of the most frequent word.
 
 
-str = "aabccaasssssss"
+# str = "aabccaasssssss"
 # count = 0
 # word = " "
 # for i in 0...str.length
@@ -48,16 +48,55 @@ str = "aabccaasssssss"
 # puts "#{word} is #{count}"
 # 
 
-if str.length > 7
-  str.each_char do |i|
-    
-    if i == i + 1
-      print i
-    end
-      
-   
 
 
+# use all things in single proram 
+
+
+class User
+  def initialize(id, name, age, department, salary)
+    @id = id
+    @name = name.capitalize
+    @age  = age 
+    @department = department
+    @join_date = Time.new
+    @salary = salary
   end
 
+
+  
+  def detail
+    puts "
+    id: #{@id}
+    name: #{@name}
+    age:  #{@age}
+    department: #{@department}
+    joining date: #{@join_date}
+    salary: #{@salary}
+    "
+   
+  end
+end
+
+
+
+puts "enter number of user yu want to add:"
+num = gets.chomp.to_i
+
+for i in 1..num
+  
+  puts "enter id"
+  id = gets.chomp.to_i
+  puts "enter name"
+  name = gets.chomp
+  puts "enter age"
+  age  = gets.chomp.to_i
+  puts "enter department"
+  dep = gets.chomp
+  puts "enter salary"
+  salary = gets.chomp.to_f
+
+  user = User.new(id, name, age, dep, salary)
+
+  user.detail
 end
