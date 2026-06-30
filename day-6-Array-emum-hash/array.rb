@@ -84,14 +84,15 @@
 # 
 
 
-#   arr1 = arr.select {|i| i > 4}
+  # arr1 = [1,2,3,4].join('')
+  # arr1 = [1,2,3,4].join(' ')
   
 # puts arr1
 # print arr
-# 
 
 
-# print arr.join.class
+
+# print arr.join('')
 # 
 
 
@@ -105,8 +106,27 @@
 # print arr.uniq
 # 
 
-arr = [1,2,3,4]
+# arr = [1,2,3,4]
 
-arr.concat([5,6,7],[8,9,10])
+# arr.concat([5,6,7],[8,9,10])
 
-print arr
+# print arr
+# 
+h1= {
+  'a' => 1 , 'b' => 2 , 'c' => 3
+}
+
+h2 = {
+  'd' => 1 , 'c' => 3 , 'e' => 4
+}
+
+# h3 = h1.merge(h2)
+
+# puts h3
+# 
+
+h3 = h1 + h2
+
+ 
+
+puts h3
