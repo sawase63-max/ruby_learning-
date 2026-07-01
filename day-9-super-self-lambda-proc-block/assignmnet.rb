@@ -28,16 +28,43 @@
 
 
 
-def counter_builder
-  count = 0
-  count1 = -> {count += 1}
-  count1.call
-  count
+# def counter_builder
+#   count = 0
+#   count1 = -> {count += 1}
+#   count1.call
+#   count
+# end
+
+# my_counter = counter_builder
+
+
+# puts my_counter
+
+
+class A 
+  def check 
+    puts "A"
+  end
 end
 
-my_counter = counter_builder
-my_counter = counter_builder
-my_counter = counter_builder
+class B 
+  def check 
+    puts "B"
+  end
+end
 
-puts my_counter
- 
+class C
+  def check 
+    puts "C"
+  end
+end
+
+def service(calll)
+
+  calll.check
+  
+end
+
+service(A.new)
+service(B.new)
+service(C.new)

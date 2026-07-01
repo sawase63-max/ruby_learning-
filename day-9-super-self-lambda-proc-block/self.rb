@@ -23,7 +23,28 @@
     # Comparing objects (==)
     # Default receiver of method calls
 
-    p = Proc.new {|a, b| puts a**2+b**2 } # => #<Proc:0x3c7d28@(irb):1>
-p.call 1, 2 # => 5
-p.call(1)# => NoMethodError: undefined method `**' for nil:NilClass
-p.call 1, 2, 3 
+#     puts self.__id__
+ 
+# class D 
+#   def self.d 
+#     puts self.__id__
+#   end
+
+#   def check
+#     puts self.__id__
+#   end
+# end
+
+# D::d
+
+# d= D.new
+
+# d.check.inspect
+# 
+
+module M 
+  def self.m
+  puts self    
+  end
+end
+M.m

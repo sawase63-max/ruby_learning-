@@ -130,16 +130,26 @@ pr = Proc.new {|x, y| puts "#{x} and #{y}"}
 # puts map([1,2,3,4]) {|v| v * 2}
 # 
 
-class Demo 
+# class Demo 
   
 
-  def check
-    pr = Proc.new {|i| return i}
+#   def check
+#     pr = Proc.new {|i| return i}
     
-    # pr.call(20)
-  end
+#     pr.call(20)
+#   end
 
-end
+# end
 
-d = Demo.new
-puts d.check.pr.call(30)
+# d = Demo.new
+# puts d.check
+
+x = 'You can see me!'
+a_proc = Proc.new { puts x }
+ 
+puts "Local variables: #{a_proc.binding.local_variables}"
+puts "Value of x: #{a_proc.binding.local_variable_get(:x)}"
+puts
+ 
+x = 'No, you really can see me!'
+puts 
