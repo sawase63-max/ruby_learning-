@@ -106,50 +106,50 @@
 # Search by title.
 # Borrow and return books.
 
-class Library
-  @@library = []
-  @@index = 0
-  def add_books(bookName,titile, author, publishYear)
-    @@index += 1 
+# class Library
+#   @@library = []
+#   @@index = 0
+#   def add_books(bookName,titile, author, publishYear)
+#     @@index += 1 
 
-    @@library[@@index] = [bookName,titile, author, publishYear]
-  end
+#     @@library[@@index] = [bookName,titile, author, publishYear]
+#   end
 
 
   
 
-  def remove(*name)
+#   def remove(*name)
 
-    count = 0
-    @@library = @@library.map do |i|
+#     count = 0
+#     @@library = @@library.map do |i|
       
    
-        if i == name
-          @@library.delete_at(count)
-          puts"deleted #{i}"
+#         if i == name
+#           @@library.delete_at(count)
+#           puts"deleted #{i}"
 
-          break
-        end
-         count += 1
-      end
-  end
-
-
-    def show
-    print @@library
-    puts 
-    end
-end
+#           break
+#         end
+#          count += 1
+#       end
+#   end
 
 
-l = Library.new
-l.add_books("one piece", "manga", "oda", 1997)
-l.add_books("one piece1", "manga", "oda", 1997)
-l.add_books("one piece2", "manga", "oda", 1997)
-l.add_books("one piece2", "manga", "oda", 1997)
-l.show
-l.remove("one piece", "manga", "oda", 1997)
-l.show
+#     def show
+#     print @@library
+#     puts 
+#     end
+# end
+
+
+# l = Library.new
+# l.add_books("one piece", "manga", "oda", 1997)
+# l.add_books("one piece1", "manga", "oda", 1997)
+# l.add_books("one piece2", "manga", "oda", 1997)
+# l.add_books("one piece2", "manga", "oda", 1997)
+# l.show
+# l.remove("one piece", "manga", "oda", 1997)
+# l.show
 # 4. Employee Payroll System
 
 # Concepts: Inheritance
@@ -327,7 +327,7 @@ l.show
 # Select seats.
 # Book tickets.
 # Generate receipt.
-# 15. Food Delivery App (Mini Project)
+# 15.Food Delivery App (Mini Project)
 
 # Requirements:
 # Classes:
@@ -336,7 +336,7 @@ l.show
 # Menu
 # Customer
 # Order
-# Delivery
+
 
 # Features:
 
@@ -356,3 +356,55 @@ l.show
 # Vehicle Rental	Inheritance, Polymorphism
 # Shopping Cart	Objects, Collections
 # E-Commerce	Modules, Inheritance, Polymorphism
+
+module Manager
+ 
+  def order
+  
+  end
+end
+
+class Restaurant
+   include Manager
+   attr_reader :menu
+  @@menu = ["Food1","Food2","Food3","Food4","Food5","Food6"]
+  
+  def food
+    return @@menu
+  end
+
+end
+class Menu < Restaurant
+  
+
+ 
+  def menu
+    return food()
+  end
+end
+
+
+class Customer < Menu
+  include Manager
+  @@m = []
+
+  def check_menu
+   @@m = menu()
+
+   puts " ,,#{@@m},,"
+  end
+
+  def select_food(food)
+    @@m.each do |i|
+     if @@m[i] == food
+      super(i)
+     end
+    end
+  end
+
+
+end
+
+c = Customer.new 
+
+c.check_menu
